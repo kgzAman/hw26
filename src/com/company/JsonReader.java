@@ -26,7 +26,7 @@ public class JsonReader {
         return gson.fromJson(fromFile, KeyValue[].class);
     }
 
-    public void WriteKeyAndValue(Object obj){
+    public static void WriteKeyAndValue(Object obj){
             try (FileWriter fw = new FileWriter("./key.Json")){
                 fw.write(gson.toJson(obj));
             }catch (IOException e ){
